@@ -1,17 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --color-primary: #2b42f4;
-  --color-secondary: #4f4d92;
-  --color-accent: #faca54;
-  --color-action: #fd3209;
-  --color-bg-dark: #0021ff;
-  --color-warm: #e9832f;
+@layer base {
+  :root {
+
+    --color-primary: #F2865E;
+    --color-accent: #8C3730;
+    --color-gold: #A67E5B;
+    --color-bg-dark: #1D2F40;
+    --color-bg-light: #F2E6D8;
+
+
+    --text-main: var(--color-bg-light);
+    --text-inverse: var(--color-bg-dark);
+  }
+
+  body {
+    background-color: var(--color-bg-dark);
+    color: var(--text-main);
+
+    background-image: radial-gradient(circle at top,
+        rgba(242, 134, 94, 0.15) 0%,
+        rgba(29, 47, 64, 1) 70%);
+    min-height: 100vh;
+    font-family: 'Cinzel', serif;
+  }
 }
 
-body {
-  background-color: #050505;
-  color: white;
-  font-family: system-ui, sans-serif;
-  margin: 0;
+@layer components {
+
+  .btn-action {
+    @apply px-6 py-3 font-bold uppercase tracking-widest transition-all duration-500;
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  }
+
+  .btn-action:hover {
+    @apply scale-105;
+    background-color: var(--color-bg-light);
+    box-shadow: 0 0 20px rgba(242, 134, 94, 0.6);
+  }
+
+
+  .faction-card {
+    @apply p-8 border-t-2 border-b-2;
+    border-color: var(--color-gold);
+    background: linear-gradient(to bottom, rgba(242, 230, 216, 0.05), transparent);
+    backdrop-filter: blur(4px);
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 2px 4px rgba(166, 126, 91, 0.5);
+  }
+
+
+  .magic-glow {
+    filter: drop-shadow(0 0 8px rgba(242, 134, 94, 0.4));
+  }
 }

@@ -1,62 +1,133 @@
+---
+
+---
+
 <section
-  class="relative h-screen w-full flex flex-col justify-between overflow-hidden bg-black"
+  class="relative h-screen w-full flex flex-col justify-between overflow-hidden bg-[#0D0D0D]"
 >
-  <div class="absolute inset-0 z-0 overflow-hidden">
+  <div class="absolute inset-0 z-0">
     <img
-      class="w-full h-full object-cover object-center animate-subtle-zoom"
-      src="/GCU3/GCU3_KEYARTV3.jpg"
-      alt="Gear.Club Unlimited 3"
+      class="w-full h-full object-cover object-center animate-subtle-zoom opacity-90"
+      src="/GreedFall/GF2_DigitalKeyart_Logo.jpg"
+      alt="GreedFall Artwork"
       loading="eager"
     />
+
     <div
-      class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#050505] z-10"
+      class="absolute bottom-[-15%] left-1/2 -translate-x-1/2 w-[140%] h-[60%] bg-[#324BD9]/10 blur-[180px] rounded-full z-0 pointer-events-none animate-pulse-slow"
     >
     </div>
   </div>
 
-  <div class="relative z-30 flex justify-end p-6 md:p-10">
-    <a
-      href="#games"
-      class="px-5 py-2 bg-[#fd3209] hover:bg-white hover:text-[#fd3209] text-white text-xs md:text-sm font-bold uppercase tracking-widest transition-all duration-300 rounded-sm shadow-xl"
-    >
-      Compra ya
-    </a>
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-[#1D2F40] via-transparent to-transparent opacity-60 z-0 pointer-events-none"
+  >
   </div>
 
-  <div class="relative z-30 flex justify-center pb-16 md:pb-24">
+  <nav class="relative z-40 flex justify-end p-8 md:p-12">
     <a
-      href="#games"
-      class="group relative px-10 py-3 overflow-hidden rounded-sm border border-[#faca54]/40 hover:border-[#faca54] transition-all duration-500"
+      href="#buy-now"
+      class="group relative px-6 py-2 overflow-hidden border border-[#A67E5B]/40 bg-[#1D2F40]/40 backdrop-blur-md transition-all duration-500"
     >
       <div
-        class="absolute inset-0 bg-black/40 backdrop-blur-sm group-hover:bg-[#faca54]/10 transition-all"
+        class="absolute inset-0 bg-[#A67E5B]/5 group-hover:bg-[#A67E5B]/20 transition-colors"
+      >
+      </div>
+      <span
+        class="relative z-10 text-[#F2E6D8] font-cinzel text-[10px] md:text-xs tracking-[0.3em] uppercase"
+      >
+        Compra ya
+      </span>
+      <div
+        class="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r border-[#A67E5B]"
+      >
+      </div>
+    </a>
+  </nav>
+
+  <div
+    class="relative z-40 flex flex-col items-center pb-16 md:pb-24 animate-slide-up"
+  >
+    <a
+      href="#buy-now"
+      class="group relative px-16 py-4 overflow-hidden transition-all duration-700"
+    >
+      <div
+        class="absolute inset-0 bg-[#8C3730]/20 backdrop-blur-xl border border-[#F2865E]/30 group-hover:border-[#F2865E] group-hover:bg-[#8C3730]/40 transition-all"
+      >
+      </div>
+
+      <div
+        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 shadow-[inset_0_0_30px_rgba(50,75,217,0.6)]"
       >
       </div>
 
       <span
-        class="relative z-10 text-white group-hover:text-[#faca54] text-lg md:text-xl font-black uppercase tracking-tighter italic transition-colors"
+        class="relative z-10 text-[#F2E6D8] group-hover:text-white font-cinzel font-bold text-lg md:text-xl tracking-[0.4em] uppercase"
       >
-        Comprar ahora
+        Compra Ya
       </span>
+
+      <div
+        class="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#A67E5B]/60 group-hover:border-[#F2865E]"
+      >
+      </div>
+      <div
+        class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-[#A67E5B]/60 group-hover:border-[#F2865E]"
+      >
+      </div>
     </a>
+
+    <p
+      class="mt-4 text-[#A67E5B] font-cinzel text-[9px] tracking-[0.6em] uppercase opacity-40"
+    >
+      Teer Fradee te espera
+    </p>
   </div>
 </section>
 
 <style>
   .animate-subtle-zoom {
-    animation: slowZoom 30s infinite alternate linear;
+    animation: slowZoom 45s infinite alternate linear;
   }
 
   @keyframes slowZoom {
     from {
-      transform: scale(1.02);
+      transform: scale(1);
     }
     to {
-      transform: scale(1.08);
+      transform: scale(1.1);
     }
   }
 
-  :global(html) {
-    scroll-behavior: smooth;
+  .animate-slide-up {
+    animation: slideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulseMagic 12s infinite ease-in-out;
+  }
+
+  @keyframes pulseMagic {
+    0%,
+    100% {
+      opacity: 0.15;
+      transform: translate(-50%, 0) scale(1);
+    }
+    50% {
+      opacity: 0.25;
+      transform: translate(-50%, 5%) scale(1.02);
+    }
   }
 </style>

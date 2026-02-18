@@ -7,5 +7,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://mglxcrtd.github.io',
-  base: '/GCU3',
+  base: '/GreedFall',
 });

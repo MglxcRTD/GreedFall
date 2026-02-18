@@ -1,0 +1,62 @@
+<section
+  class="relative h-screen w-full flex flex-col justify-between overflow-hidden bg-black"
+>
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <img
+      class="w-full h-full object-cover object-center animate-subtle-zoom"
+      src="/GCU3/GCU3_KEYARTV3.jpg"
+      alt="Gear.Club Unlimited 3"
+      loading="eager"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#050505] z-10"
+    >
+    </div>
+  </div>
+
+  <div class="relative z-30 flex justify-end p-6 md:p-10">
+    <a
+      href="#games"
+      class="px-5 py-2 bg-[#fd3209] hover:bg-white hover:text-[#fd3209] text-white text-xs md:text-sm font-bold uppercase tracking-widest transition-all duration-300 rounded-sm shadow-xl"
+    >
+      Compra ya
+    </a>
+  </div>
+
+  <div class="relative z-30 flex justify-center pb-16 md:pb-24">
+    <a
+      href="#games"
+      class="group relative px-10 py-3 overflow-hidden rounded-sm border border-[#faca54]/40 hover:border-[#faca54] transition-all duration-500"
+    >
+      <div
+        class="absolute inset-0 bg-black/40 backdrop-blur-sm group-hover:bg-[#faca54]/10 transition-all"
+      >
+      </div>
+
+      <span
+        class="relative z-10 text-white group-hover:text-[#faca54] text-lg md:text-xl font-black uppercase tracking-tighter italic transition-colors"
+      >
+        Comprar ahora
+      </span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .animate-subtle-zoom {
+    animation: slowZoom 30s infinite alternate linear;
+  }
+
+  @keyframes slowZoom {
+    from {
+      transform: scale(1.02);
+    }
+    to {
+      transform: scale(1.08);
+    }
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+</style>

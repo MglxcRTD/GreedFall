@@ -1,9 +1,8 @@
 ---
-
+/* SectionSpiders.astro - Adaptada para Laptop y Monitor Grande */
 ---
-
 <section
-    class="section-spiders relative py-40 md:py-64 px-6 md:px-12 overflow-hidden bg-transparent"
+    class="section-spiders relative py-20 md:py-32 lg:py-64 px-6 md:px-12 overflow-hidden bg-transparent"
 >
     <div class="absolute inset-0 z-0 pointer-events-none">
         <div
@@ -36,10 +35,10 @@
     </div>
 
     <div
-        class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 lg:gap-32 items-center relative z-20"
+        class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-32 items-center relative z-20"
     >
         <div
-            class="flex flex-col space-y-10 relative -translate-x-40 translate-y-10"
+            class="flex flex-col space-y-6 lg:space-y-10 relative spiders-text-move"
         >
             <div class="flex items-center gap-4">
                 <div class="h-[1px] w-12 bg-[#F2865E]"></div>
@@ -50,7 +49,7 @@
             </div>
 
             <h2
-                class="text-6xl md:text-8xl font-cinzel font-bold leading-[0.85] text-[#F2E6D8] drop-shadow-2xl"
+                class="text-5xl md:text-6xl lg:text-8xl font-cinzel font-bold leading-[0.85] text-[#F2E6D8] drop-shadow-2xl spiders-title-size"
             >
                 Maestros del <br />
                 <span
@@ -62,7 +61,7 @@
 
             <div class="relative">
                 <p
-                    class="text-[#F2E6D8]/90 text-2xl md:text-3xl font-serif italic leading-relaxed border-l-4 border-[#F2865E] pl-10 py-2"
+                    class="text-[#F2E6D8]/90 text-xl md:text-2xl lg:text-3xl font-serif italic leading-relaxed border-l-4 border-[#F2865E] pl-6 lg:pl-10 py-2 spiders-p-size"
                 >
                     Spiders, un estudio <span
                         class="text-[#F2D541] not-italic font-cinzel font-bold shadow-[#F2D541]/20"
@@ -87,7 +86,7 @@
             </div>
         </div>
 
-        <div class="relative group translate-x-32 translate-y-10">
+        <div class="relative group spiders-img-move">
             <div
                 class="absolute -inset-16 bg-[#F2D541]/10 blur-[100px] rounded-full opacity-40 group-hover:opacity-80 transition-all duration-1000"
             >
@@ -122,6 +121,26 @@
 <style>
     .section-spiders {
         contain: paint;
+    }
+
+    /* MONITOR GRANDE (>1536px) - Aquí tus valores originales */
+    @media (min-width: 1537px) {
+        .spiders-text-move { transform: translateX(-160px) translateY(40px) !important; }
+        .spiders-img-move { transform: translateX(128px) translateY(40px) !important; }
+    }
+
+    /* PORTÁTIL / LAPTOP (<=1536px) - Ajustes para que quepa perfecto */
+    @media (max-width: 1536px) {
+        .section-spiders { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+        
+        .spiders-text-move { transform: translateX(20px) translateY(0px) !important; }
+        .spiders-img-move { transform: translateX(20px) translateY(0px) !important; }
+
+        .spiders-title-size { font-size: 3.5rem !important; }
+        .spiders-p-size { font-size: 1.4rem !important; padding-left: 1.5rem !important; }
+        
+        /* Ajuste para que la imagen no sea tan gigante en laptop */
+        .spiders-img-move { max-width: 90% !important; margin: 0 auto !important; }
     }
 
     @keyframes gradient-x {

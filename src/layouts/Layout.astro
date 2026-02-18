@@ -75,20 +75,41 @@ const {
 
   section {
     position: relative;
+    /* AJUSTE PORTÁTIL: Reducimos el inicio del degradado al 5% para que el logo no se vea borroso arriba */
     mask-image: linear-gradient(
       to bottom,
       transparent 0%,
-      black 20%,
-      black 80%,
+      black 5%, 
+      black 95%,
       transparent 100%
     );
     -webkit-mask-image: linear-gradient(
       to bottom,
       transparent 0%,
-      black 20%,
-      black 80%,
+      black 5%,
+      black 95%,
       transparent 100%
     );
+  }
+
+  /* En monitores grandes mantenemos tu degradado original */
+  @media (min-width: 1537px) {
+    section {
+      mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+      );
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+      );
+    }
   }
 
   #buy-now {

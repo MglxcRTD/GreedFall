@@ -1,8 +1,8 @@
 ---
-/* FirstSection.astro - Solución Final: Escala y Posición para Portátil */
+/* FirstSection.astro - Ajuste para Espaciado Equitativo Global */
 ---
 <section
-  class="first-section relative min-h-fit lg:min-h-screen py-10 md:py-16 lg:py-32 px-6 flex flex-col justify-center items-center overflow-hidden bg-transparent"
+  class="first-section relative min-h-fit lg:min-h-screen px-6 flex flex-col justify-center items-center overflow-hidden bg-transparent"
 >
   <div class="absolute inset-0 z-0 pointer-events-none">
     <div class="absolute top-[10%] -left-[5%] w-[60%] h-[60%] bg-[#A67E5B]/10 blur-[120px] rounded-full opacity-50"></div>
@@ -55,6 +55,7 @@
 <style>
   .first-section {
     contain: paint;
+    /* Eliminada la máscara interna para usar la global del Layout */
   }
 
   /* MONITOR GRANDE (>1536px) */
@@ -66,25 +67,32 @@
 
   /* PORTÁTIL / LAPTOP (Resoluciones intermedias) */
   @media (max-width: 1536px) {
-    .first-section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+    /* Eliminado el padding manual (py) para que mande el !important del Layout */
     
-    /* Logo un poco más a la derecha y tamaño ajustado */
     .logo-fix { 
         height: 2.2rem !important; 
         margin-bottom: 1rem !important;
-        transform: translateX(20px) translateY(-60px)  !important; 
-       
+        transform: translateX(20px) translateY(-60px) !important; 
     }
 
-    /* Título más pequeño para ganar espacio vertical */
-    .title-fix { font-size: 2.2rem !important; margin-bottom: 1.2rem !important; transform: translateX(20px) translateY(-20px)  !important;}
+    .title-fix { 
+        font-size: 2.2rem !important; 
+        margin-bottom: 1.2rem !important; 
+        transform: translateX(20px) translateY(-20px) !important;
+    }
     
-    /* Párrafos más compactos */
-    .paragraph-fix { font-size: 0.95rem !important; line-height: 1.4 !important; transform: translateX(20px) translateY(-20px)  !important; }
+    .paragraph-fix { 
+        font-size: 0.95rem !important; 
+        line-height: 1.4 !important; 
+        transform: translateX(20px) translateY(-20px) !important; 
+    }
     .paragraph-fix p { margin-bottom: 0.8rem !important; }
     
-    /* Vídeo reducido al 70% de su capacidad para que quepa todo */
-    .video-fix { max-width: 90% !important; margin: 0 auto !important; transform: translateY(-20px) !important;}
+    .video-fix { 
+        max-width: 90% !important; 
+        margin: 0 auto !important; 
+        transform: translateY(-20px) !important;
+    }
     
     .line-fix { margin-top: 1rem !important; }
   }

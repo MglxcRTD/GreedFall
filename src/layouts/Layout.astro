@@ -75,6 +75,9 @@ const {
 
   section {
     position: relative;
+    /* AJUSTE PARA PADDING EQUITATIVO EN LAS 9 SECCIONES */
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
     /* AJUSTE PORTÁTIL: Reducimos el inicio del degradado al 5% para que el logo no se vea borroso arriba */
     mask-image: linear-gradient(
       to bottom,
@@ -95,6 +98,8 @@ const {
   /* En monitores grandes mantenemos tu degradado original */
   @media (min-width: 1537px) {
     section {
+      padding-top: 10rem !important;
+      padding-bottom: 10rem !important;
       mask-image: linear-gradient(
         to bottom,
         transparent 0%,

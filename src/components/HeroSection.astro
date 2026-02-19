@@ -1,9 +1,9 @@
 ---
-
+/* HeroSection.astro - Fix definitivo de posición de botones */
 ---
 
 <section
-  class="relative h-screen w-full flex flex-col justify-between overflow-hidden bg-[#0D0D0D]"
+  class="relative h-screen w-full overflow-hidden bg-[#0D0D0D]"
 >
   <div class="absolute inset-0 z-0">
     <img
@@ -24,10 +24,10 @@
   >
   </div>
 
-  <nav class="relative z-40 flex justify-end p-8 md:p-12">
+  <nav class="absolute top-0 right-0 z-40 p-8 md:p-12">
     <a
       href="#buy-now"
-      class="group relative px-6 py-2 overflow-hidden border border-[#A67E5B]/40 bg-[#1D2F40]/40 backdrop-blur-md transition-all duration-500"
+      class="group relative px-6 py-2 overflow-hidden border border-[#A67E5B]/40 bg-[#1D2F40]/40 backdrop-blur-md transition-all duration-500 block"
     >
       <div
         class="absolute inset-0 bg-[#A67E5B]/5 group-hover:bg-[#A67E5B]/20 transition-colors"
@@ -46,11 +46,11 @@
   </nav>
 
   <div
-    class="relative z-40 flex flex-col items-center pb-16 md:pb-24 animate-slide-up"
+    class="absolute bottom-0 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center pb-16 md:pb-24 animate-slide-up w-full"
   >
     <a
       href="#buy-now"
-      class="group relative px-16 py-4 overflow-hidden transition-all duration-700"
+      class="group relative px-16 py-4 overflow-hidden transition-all duration-700 block"
     >
       <div
         class="absolute inset-0 bg-[#8C3730]/20 backdrop-blur-xl border border-[#F2865E]/30 group-hover:border-[#F2865E] group-hover:bg-[#8C3730]/40 transition-all"
@@ -87,17 +87,14 @@
 </section>
 
 <style>
+  /* Mantenemos todas tus animaciones intactas */
   .animate-subtle-zoom {
     animation: slowZoom 45s infinite alternate linear;
   }
 
   @keyframes slowZoom {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.1);
-    }
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
   }
 
   .animate-slide-up {
@@ -120,8 +117,7 @@
   }
 
   @keyframes pulseMagic {
-    0%,
-    100% {
+    0%, 100% {
       opacity: 0.15;
       transform: translate(-50%, 0) scale(1);
     }

@@ -1,13 +1,13 @@
 ---
-/* SectionLegacy.astro - Adaptada para Laptop y Monitor Grande */
+/* ThirdSection.astro - Reconstrucción fluida para todas las resoluciones */
 ---
 
 <section
-    class="section-legacy relative py-20 md:py-32 lg:py-52 px-6 md:px-12 overflow-visible bg-transparent"
+    class="relative overflow-hidden bg-transparent w-full"
 >
     <div class="absolute inset-0 z-0 pointer-events-none">
         <div
-            class="absolute -top-[20%] right-[5%] w-[80%] h-[70%] bg-[#A67233]/10 blur-[140px] rounded-full mix-blend-screen opacity-30"
+            class="absolute top-0 right-0 w-[80%] h-[70%] bg-[#A67233]/10 blur-[120px] rounded-full mix-blend-screen opacity-30"
         >
         </div>
         <div
@@ -21,59 +21,11 @@
     </div>
 
     <div
-        class="max-w-[1500px] mx-auto grid md:grid-cols-12 gap-12 lg:gap-24 items-center relative z-20"
+        class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-20"
     >
+        <!-- COLUMNA IMAGEN (Orden 1 en móvil, Orden 1 en escritorio) -->
         <div
-            class="md:col-span-6 order-2 md:order-2 flex flex-col space-y-6 lg:space-y-10 relative legacy-text-move"
-        >
-            <div class="flex items-center gap-4">
-                <span
-                    class="font-cinzel text-xs tracking-[0.5em] text-[#A67233] uppercase"
-                    >Un Legado Imparable</span
-                >
-                <div
-                    class="h-[1px] flex-grow bg-gradient-to-r from-[#A67233]/40 to-transparent"
-                >
-                </div>
-            </div>
-
-            <h2
-                class="text-4xl md:text-5xl lg:text-7xl font-cinzel font-bold leading-[0.9] text-[#F2E6D8]/90 legacy-title-size"
-            >
-                Dos Millones de <br />
-                <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-[#D99B66] via-[#A67233] to-[#592D23]"
-                >
-                    Almas Conquistadas
-                </span>
-            </h2>
-
-            <p
-                class="text-[#F2E6D8]/70 text-lg md:text-2xl font-serif italic leading-relaxed legacy-p-size"
-            >
-                El regreso de la licencia GreedFall, que ha conquistado a <span
-                    class="text-[#D99B66] not-italic font-cinzel font-bold underline decoration-[#A67233]/40 underline-offset-8"
-                    >más de 2 millones</span
-                > de jugadores y cuya comunidad espera impaciente un nuevo título.
-            </p>
-
-            <div
-                class="flex items-center gap-4 opacity-30 group cursor-default"
-            >
-                <div
-                    class="w-10 h-10 border border-[#A67233] rounded-full flex items-center justify-center group-hover:rotate-90 transition-transform duration-1000"
-                >
-                    <div class="w-1 h-1 bg-[#D99B66] rounded-full"></div>
-                </div>
-                <span
-                    class="font-cinzel text-[10px] tracking-widest text-[#F2E6D8]"
-                    >ESTADÍSTICAS OFICIALES // TEER FRADEE</span
-                >
-            </div>
-        </div>
-
-        <div
-            class="md:col-span-6 order-1 md:order-1 relative group legacy-img-move"
+            class="relative group w-full max-w-[600px] mx-auto lg:max-w-full order-1"
         >
             <div
                 class="absolute -inset-10 bg-[#D96E48]/5 blur-[90px] rounded-full opacity-20 transition-opacity duration-1000"
@@ -117,6 +69,56 @@
                 </div>
             </div>
         </div>
+
+        <!-- COLUMNA TEXTO (Orden 2 en móvil, Orden 2 en escritorio) -->
+        <div
+            class="flex flex-col space-y-6 lg:space-y-8 relative order-2 text-left"
+        >
+            <div class="flex items-center gap-4">
+                <span
+                    class="font-cinzel text-xs tracking-[0.5em] text-[#A67233] uppercase"
+                    >Un Legado Imparable</span
+                >
+                <div
+                    class="h-[1px] w-20 bg-gradient-to-r from-[#A67233]/40 to-transparent"
+                >
+                </div>
+            </div>
+
+            <h2
+                class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-cinzel font-bold leading-[1.1] text-[#F2E6D8]/90"
+            >
+                Dos Millones de <br />
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-[#D99B66] via-[#A67233] to-[#592D23]"
+                >
+                    Almas Conquistadas
+                </span>
+            </h2>
+
+            <p
+                class="text-[#F2E6D8]/70 text-base md:text-lg lg:text-xl font-serif italic leading-relaxed max-w-xl"
+            >
+                El regreso de la licencia GreedFall, que ha conquistado a <span
+                    class="text-[#D99B66] not-italic font-cinzel font-bold underline decoration-[#A67233]/40 underline-offset-8"
+                    >más de 2 millones</span
+                > de jugadores y cuya comunidad espera impaciente un nuevo título.
+            </p>
+
+            <div
+                class="flex items-center gap-4 opacity-30 group cursor-default pt-4"
+            >
+                <div
+                    class="w-10 h-10 border border-[#A67233] rounded-full flex items-center justify-center group-hover:rotate-90 transition-transform duration-1000"
+                >
+                    <div class="w-1 h-1 bg-[#D99B66] rounded-full"></div>
+                </div>
+                <span
+                    class="font-cinzel text-[10px] tracking-widest text-[#F2E6D8]"
+                    >ESTADÍSTICAS OFICIALES // TEER FRADEE</span
+                >
+            </div>
+        </div>
     </div>
 
 <div class="flex justify-center w-full mt-10">
@@ -147,37 +149,3 @@
   </a>
 </div>
 </section>
-
-<style>
-    .section-legacy {
-        contain: paint;
-        mask-image: linear-gradient(
-            to bottom,
-            transparent,
-            black 15%,
-            black 85%,
-            transparent
-        );
-    }
-
-    /* MONITOR GRANDE (>1536px) - Tus valores originales */
-    @media (min-width: 1537px) {
-        .legacy-text-move { transform: translateX(40px) translateY(-60px) !important; }
-        .legacy-img-move { transform: translateX(-80px) translateY(-60px) !important; }
-    }
-
-    /* PORTÁTIL / LAPTOP (<=1536px) - Ajustes para que quepa todo */
-    @media (max-width: 1536px) {
-        .section-legacy { padding-top: 5rem !important; padding-bottom: 5rem !important; }
-        
-        /* Centramos un poco más para evitar que se pegue a los bordes */
-        .legacy-text-move { transform: translateX(20px) translateY(-20px) !important; }
-        .legacy-img-move { transform: translateX(0px) translateY(-20px) !important; }
-
-        .legacy-title-size { font-size: 3rem !important; }
-        .legacy-p-size { font-size: 1.2rem !important; }
-        
-        /* Ajuste de escala de imagen */
-        .legacy-img-move { max-width: 90% !important; margin: 0 auto !important; }
-    }
-</style>

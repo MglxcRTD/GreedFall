@@ -17,7 +17,7 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
 
@@ -46,7 +46,7 @@ const {
     >
     </div>
 
-    <main class="relative z-10 min-h-screen">
+    <main class="relative z-10 min-h-screen w-full">
       <slot />
     </main>
   </body>
@@ -58,6 +58,13 @@ const {
     --color-accent: #a67e5b;
     --color-dark: #1d2f40;
     --color-cream: #f2e6d8;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Evita el baile lateral en móviles */
   }
 
   html {
@@ -73,65 +80,43 @@ const {
     letter-spacing: 0.05em;
   }
 
-  section {
+  /* AJUSTE DE RESOLUCIÓN UNIVERSAL PARA SECCIONES */
+  /* Añadimos #buy-now explícitamente para forzar la homogeneidad en la sección de compra */
+  section, #buy-now {
     position: relative;
-    /* AJUSTE PARA PADDING EQUITATIVO EN LAS 9 SECCIONES */
-    padding-top: 6rem !important;
-    padding-bottom: 6rem !important;
-    /* AJUSTE PORTÁTIL: Reducimos el inicio del degradado al 5% para que el logo no se vea borroso arriba */
+    width: 100%;
+    min-height: 100vh;
+    /* Padding estándar homogéneo para móvil */
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* IMPORTANTE: Quitamos align-items: center global para no romper Grids internos */
+    align-items: stretch; 
+
+    /* Máscara global para todas las resoluciones (Móvil y Desktop) */
     mask-image: linear-gradient(
       to bottom,
       transparent 0%,
-      black 5%, 
-      black 95%,
+      black 15%,
+      black 85%,
       transparent 100%
-    );
+    ) !important;
     -webkit-mask-image: linear-gradient(
       to bottom,
       transparent 0%,
-      black 5%,
-      black 95%,
+      black 15%,
+      black 85%,
       transparent 100%
-    );
+    ) !important;
   }
 
-  /* En monitores grandes mantenemos tu degradado original */
-  @media (min-width: 1537px) {
+  /* AJUSTE PARA PORTÁTILES Y MONITORES ESTÁNDAR */
+  @media (min-width: 1024px) {
     section {
-      padding-top: 10rem !important;
-      padding-bottom: 10rem !important;
-      mask-image: linear-gradient(
-        to bottom,
-        transparent 0%,
-        black 20%,
-        black 80%,
-        transparent 100%
-      );
-      -webkit-mask-image: linear-gradient(
-        to bottom,
-        transparent 0%,
-        black 20%,
-        black 80%,
-        transparent 100%
-      );
+      /* Padding estándar homogéneo para escritorio */
+      padding: 8rem 4rem; /* Aumentamos padding para dar espacio a la transición */
     }
-  }
-
-  #buy-now {
-    mask-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      black 5%,
-      black 95%,
-      transparent 100%
-    ) !important;
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      black 5%,
-      black 95%,
-      transparent 100%
-    ) !important;
   }
 
   ::-webkit-scrollbar {

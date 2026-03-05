@@ -7,11 +7,27 @@
 >
   <div class="absolute inset-0 z-0">
     <img
-      class="w-full h-full object-cover object-center animate-subtle-zoom opacity-90"
+      class="hidden lg:block w-full h-full object-cover object-center animate-subtle-zoom opacity-90"
       src="/GreedFall/GF2_DigitalKeyart_Logo.jpg"
       alt="GreedFall Artwork"
       loading="eager"
     />
+
+    <!-- Contenedor solo para MÓVIL (se oculta en escritorio) -->
+    <div class="lg:hidden relative w-full h-full">
+      <!-- 1. Imagen de fondo para móvil: Cambia el src por tu imagen -->
+      <img
+        src="/GreedFall/GF2_DigitalKeyart_NoLogo.jpg"
+        alt="GreedFall Mobile Artwork"
+        class="w-full h-full object-cover object-center"
+      />
+      <!-- 2. Imagen del logo para móvil: Cambia el src por tu imagen -->
+      <img
+        src="/GreedFall/GreedFallTheDyingWorld_mono_white.png"
+        alt="GreedFall Mobile Logo"
+        class="absolute bottom-48 left-1/2 -translate-x-1/2 w-3/4 max-w-[280px]"
+      />
+    </div>
 
     <div
       class="absolute bottom-[-15%] left-1/2 -translate-x-1/2 w-[140%] h-[60%] bg-[#324BD9]/10 blur-[180px] rounded-full z-0 pointer-events-none animate-pulse-slow"
@@ -46,7 +62,7 @@
   </nav>
 
   <div
-    class="absolute bottom-0 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center pb-16 md:pb-24 animate-slide-up w-full"
+    class="absolute bottom-0 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center pb-12 md:pb-12 lg:pb-8 animate-slide-up w-full"
   >
     <a
       href="#buy-now"

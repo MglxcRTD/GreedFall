@@ -1,49 +1,96 @@
 ---
 /* FirstSection.astro - Ajuste para Espaciado Equitativo Global */
 ---
+
 <section
-  class="first-section relative min-h-fit lg:min-h-screen px-6 flex flex-col justify-center items-center overflow-hidden bg-transparent"
+  class="first-section relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-transparent"
 >
   <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="absolute top-[10%] -left-[5%] w-[60%] h-[60%] bg-[#A67E5B]/10 blur-[120px] rounded-full opacity-50"></div>
-    <div class="absolute bottom-[5%] -right-[10%] w-[50%] h-[50%] bg-[#8C3730]/10 blur-[130px] rounded-full mix-blend-overlay"></div>
-    <div class="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+    <div
+      class="absolute top-[10%] -left-[5%] w-[60%] h-[60%] bg-[#A67E5B]/10 blur-[120px] rounded-full opacity-50"
+    >
+    </div>
+    <div
+      class="absolute bottom-[5%] -right-[10%] w-[50%] h-[50%] bg-[#8C3730]/10 blur-[130px] rounded-full mix-blend-overlay"
+    >
+    </div>
+    <div
+      class="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"
+    >
+    </div>
   </div>
 
-  <div class="mx-auto max-w-[1500px] w-full relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+  <div class="mx-auto max-w-[1600px] w-full relative z-10">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-20 items-center"
+    >
       <div class="lg:col-span-5 flex flex-col items-start text-left">
         <img
           src="/GreedFall/GreedFallTheDyingWorld_mono_white.png"
           alt="GreedFall Logo"
-          class="h-8 md:h-10 lg:h-14 mb-6 md:mb-12 object-contain drop-shadow-[0_0_20px_rgba(166,126,91,0.2)] relative logo-fix"
+          class="w-auto h-auto max-w-[90%] md:max-w-md lg:max-w-[380px] xl:max-w-xl mb-6 md:mb-10 object-contain drop-shadow-[0_0_20px_rgba(166,126,91,0.2)] relative"
         />
 
-        <div class="flex flex-col items-start relative content-fix translate-y-0">
-          <h2 class="font-cinzel text-xl md:text-3xl lg:text-5xl font-bold text-[#F2E6D8] leading-tight mb-4 md:mb-8 title-fix">
-            Un Mundo <span class="text-[#F2865E]">Forjado</span> por la Magia y el Acero
+        <div class="flex flex-col items-start relative">
+          <h2
+            class="font-cinzel text-2xl md:text-4xl lg:text-4xl xl:text-6xl font-bold text-[#F2E6D8] leading-tight mb-4 md:mb-8"
+          >
+            Un Mundo <span class="text-[#F2865E]">Forjado</span> por la Magia y el
+            Acero
           </h2>
 
-          <div class="space-y-4 md:space-y-6 text-[#F2E6D8]/80 font-serif text-sm md:text-lg lg:text-xl leading-relaxed italic border-l-2 border-[#A67E5B]/20 pl-6 lg:pl-8 paragraph-fix">
-            <p>Vuelve al universo de GreedFall en una nueva y emocionante aventura en la que cada decisión tiene consecuencias.</p>
-            <p>Arrancado de tu isla, viajarás por el Viejo Continente, devastado por la guerra y las enfermedades, forjando alianzas y luchando para recuperar tu libertad.</p>
-            <p class="not-italic font-sans text-[10px] md:text-xs lg:text-sm tracking-wide text-[#A67E5B] uppercase opacity-90 leading-tight">
-              Tras un periodo de Early Access que permitió reunir a miles de fans y perfeccionar el juego al máximo, la aventura completa comienza ahora en consolas y PC.
+          <div
+            class="space-y-4 md:space-y-6 text-[#F2E6D8]/80 font-serif text-sm md:text-lg lg:text-xl leading-relaxed italic border-l-2 border-[#A67E5B]/20 pl-6 lg:pl-8"
+          >
+            <p>
+              Vuelve al universo de GreedFall en una nueva y emocionante
+              aventura en la que cada decisión tiene consecuencias.
+            </p>
+            <p>
+              Arrancado de tu isla, viajarás por el Viejo Continente, devastado
+              por la guerra y las enfermedades, forjando alianzas y luchando
+              para recuperar tu libertad.
+            </p>
+            <p
+              class="not-italic font-sans text-[10px] md:text-xs lg:text-sm tracking-wide text-[#A67E5B] uppercase opacity-90 leading-tight"
+            >
+              Tras un periodo de Early Access que permitió reunir a miles de
+              fans y perfeccionar el juego al máximo, la aventura completa
+              comienza ahora en consolas y PC.
             </p>
           </div>
-          <div class="mt-6 md:mt-10 h-px w-24 md:w-40 bg-gradient-to-r from-[#A67E5B] to-transparent line-fix"></div>
+          <div
+            class="mt-6 md:mt-10 h-px w-24 md:w-40 bg-gradient-to-r from-[#A67E5B] to-transparent"
+          >
+          </div>
         </div>
       </div>
 
-      <div class="lg:col-span-7 w-full relative video-fix">
-        <div class="group relative max-w-[500px] md:max-w-[700px] lg:max-w-full mx-auto lg:ml-auto">
-          <div class="absolute -inset-1 bg-gradient-to-tr from-[#A67E5B]/40 via-[#F2865E]/20 to-[#A67E5B]/40 rounded-sm blur-[2px] opacity-50 group-hover:opacity-100 transition duration-700"></div>
-          <div class="relative bg-[#0D0D0D] p-1 border border-[#A67E5B]/30 shadow-2xl transition-transform duration-500 group-hover:scale-[1.01]">
+      <div class="lg:col-span-7 w-full relative">
+        <div
+          class="group relative w-full max-w-full md:max-w-[700px] lg:max-w-full mx-auto lg:ml-auto"
+        >
+          <div
+            class="absolute -inset-1 bg-gradient-to-tr from-[#A67E5B]/40 via-[#F2865E]/20 to-[#A67E5B]/40 rounded-sm blur-[2px] opacity-50 group-hover:opacity-100 transition duration-700"
+          >
+          </div>
+          <div
+            class="relative bg-[#0D0D0D] p-1 border border-[#A67E5B]/30 shadow-2xl transition-transform duration-500 group-hover:scale-[1.01] w-full"
+          >
             <div class="video-wrapper relative aspect-video overflow-hidden">
-              <video autoplay muted loop playsinline class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000"
+              >
                 <source src="/GreedFall/video_promo.mp4" type="video/mp4" />
               </video>
-              <div class="absolute inset-0 bg-gradient-to-t from-[#1D2F40]/40 to-transparent pointer-events-none"></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#1D2F40]/40 to-transparent pointer-events-none"
+              >
+              </div>
             </div>
           </div>
         </div>
@@ -51,78 +98,38 @@
     </div>
   </div>
 
-  <div class="flex justify-center md:justify-end mt-8">
-  <a
-    href="#buy-now"
-    class="group relative px-8 py-3 overflow-hidden border border-[#A67E5B]/40 bg-[#1D2F40]/40 backdrop-blur-md transition-all duration-500 block"
-  >
-    <div
-      class="absolute inset-0 bg-[#A67E5B]/5 group-hover:bg-[#A67E5B]/20 transition-colors"
+  <div class="flex justify-center mt-8">
+    <a
+      href="#buy-now"
+      class="group relative px-8 py-3 overflow-hidden border border-[#A67E5B]/40 bg-[#1D2F40]/40 backdrop-blur-md transition-all duration-500 block"
     >
-    </div>
-    
-    <span
-      class="relative z-10 text-[#F2E6D8] font-cinzel text-xs tracking-[0.3em] uppercase"
-    >
-      Compra ya
-    </span>
+      <div
+        class="absolute inset-0 bg-[#A67E5B]/5 group-hover:bg-[#A67E5B]/20 transition-colors"
+      >
+      </div>
 
-    <div
-      class="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#A67E5B]"
-    >
-    </div>
+      <span
+        class="relative z-10 text-[#F2E6D8] font-cinzel text-xs tracking-[0.3em] uppercase"
+      >
+        Compra ya
+      </span>
 
-    <div
-      class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#A67E5B]"
-    >
-    </div>
-  </a>
-</div>
+      <div
+        class="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#A67E5B]"
+      >
+      </div>
+
+      <div
+        class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#A67E5B]"
+      >
+      </div>
+    </a>
+  </div>
 </section>
 
 <style>
   .first-section {
     contain: paint;
-    /* Eliminada la máscara interna para usar la global del Layout */
-  }
-
-  /* MONITOR GRANDE (>1536px) */
-  @media (min-width: 1537px) {
-    .logo-fix { transform: translateX(-100px) translateY(-20px); }
-    .content-fix { transform: translateX(-100px); }
-    .video-fix { transform: translateX(20px) translateY(20px); }
-  }
-
-  /* PORTÁTIL / LAPTOP (Resoluciones intermedias) */
-  @media (max-width: 1536px) {
-    /* Eliminado el padding manual (py) para que mande el !important del Layout */
-    
-    .logo-fix { 
-        height: 2.2rem !important; 
-        margin-bottom: 1rem !important;
-        transform: translateX(20px) translateY(-60px) !important; 
-    }
-
-    .title-fix { 
-        font-size: 2.2rem !important; 
-        margin-bottom: 1.2rem !important; 
-        transform: translateX(20px) translateY(-20px) !important;
-    }
-    
-    .paragraph-fix { 
-        font-size: 0.95rem !important; 
-        line-height: 1.4 !important; 
-        transform: translateX(20px) translateY(-20px) !important; 
-    }
-    .paragraph-fix p { margin-bottom: 0.8rem !important; }
-    
-    .video-fix { 
-        max-width: 90% !important; 
-        margin: 0 auto !important; 
-        transform: translateY(-20px) !important;
-    }
-    
-    .line-fix { margin-top: 1rem !important; }
   }
 
   .video-wrapper {

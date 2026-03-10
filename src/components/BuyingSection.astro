@@ -1,10 +1,10 @@
 ---
-/* SectionBuyNow.astro - Diseño Rectangular con Ajuste de Escala Especial */
+/* SectionBuyNow.astro - Diseño Rectangular con Ajuste de Escala Especial y Difuminado Superior Suavizado */
 ---
 
 <section
   id="buy-now"
-  class="relative min-h-screen flex flex-col overflow-visible py-32 md:py-52 no-mask"
+  class="relative min-h-screen flex flex-col overflow-visible py-32 md:py-52 top-mask-only"
 >
   <div class="absolute inset-0 z-0 overflow-hidden">
     <img
@@ -14,7 +14,7 @@
     />
 
     <div
-      class="absolute inset-0 bg-gradient-to-b from-[#0D0D0D] via-transparent to-[#0D0D0D] opacity-80"
+      class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0D0D0D] opacity-80"
     >
     </div>
 
@@ -32,12 +32,8 @@
     class="max-w-[1400px] mx-auto px-6 relative z-10 w-full flex-grow flex flex-col items-center"
   >
     <div class="text-center mb-24">
-      <span
-        class="text-[#D9895B] text-[10px] font-cinzel font-bold uppercase tracking-[0.4em] mb-4 block"
-        >Disponibilidad</span
-      >
       <h2
-        class="text-6xl md:text-8xl font-cinzel font-bold leading-none text-[#F2E6D8] tracking-tighter"
+        class="text-6xl md:text-8xl font-cinzel font-bold leading-none text-[#F2E6D8] tracking-tighter mt-12"
       >
         Escribe tu <br />
         <span
@@ -52,13 +48,22 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 w-full max-w-[1200px]">
-      
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 w-full max-w-[1200px]"
+    >
       <div class="flex flex-col gap-8">
         <div class="relative group w-full">
-          <div class="absolute -inset-2 bg-[#1D2F40]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="relative p-2 border-2 border-double border-[#5B5E67]/40 bg-[#0D0D0D]/80 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:border-[#D9895B]/60">
-            <div class="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-[#D9895B]"></div>
+          <div
+            class="absolute -inset-2 bg-[#1D2F40]/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+          >
+          </div>
+          <div
+            class="relative p-2 border-2 border-double border-[#5B5E67]/40 bg-[#0D0D0D]/80 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:border-[#D9895B]/60"
+          >
+            <div
+              class="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-[#D9895B]"
+            >
+            </div>
             <div class="relative overflow-hidden aspect-[3/3.8] bg-black/40">
               <img
                 src="/GreedFall/PS5_Greedfall_Standard_2D_PEGI.png"
@@ -68,49 +73,126 @@
             </div>
             <div class="mt-6 border-t border-white/10 pt-6 text-center px-4">
               <div class="flex justify-center items-center gap-4 relative z-20">
-                <a href="https://www3.game.es/videojuegos/rol/playstation-5/greedfall-the-dying-world-deluxe-edition/254660" target="_blank" class="hover:scale-125 transition-transform brightness-[1.5] contrast-[1.2]">
-                  <img src="/GreedFall/Logo_GAME_Store_Iberia.png" class="h-5 w-auto object-contain" alt="Game" />
+                <a
+                  href="https://www3.game.es/videojuegos/rol/playstation-5/greedfall-the-dying-world-deluxe-edition/254660"
+                  target="_blank"
+                  class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+                >
+                  <img
+                    src="/GreedFall/Logo_GAME_Store_Iberia.png"
+                    class="h-5 w-auto object-contain"
+                    alt="Game"
+                  />
                 </a>
-                <a href="https://www.fnac.es/Greedfall-The-Dying-World-PS5-Videojuego-PS5/a12806599" target="_blank" class="hover:scale-125 transition-transform brightness-[1.5] contrast-[1.2]">
-                  <img src="/GreedFall/Fnac_Logo.svg.png" class="h-5 w-auto object-contain" alt="Fnac" />
+                <a
+                  href="https://www.fnac.es/Greedfall-The-Dying-World-PS5-Videojuego-PS5/a12806599"
+                  target="_blank"
+                  class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+                >
+                  <img
+                    src="/GreedFall/Fnac_Logo.svg.png"
+                    class="h-5 w-auto object-contain"
+                    alt="Fnac"
+                  />
                 </a>
-                <a href="https://www.elcorteingles.es/videojuegos/A200285229-greedfall-the-dying-world-playstation-5/" target="_blank" class="hover:scale-125 transition-transform brightness-[1.5] contrast-[1.2]">
-                  <img src="/GreedFall/eci-triangulo-logo.png" class="h-5 w-auto object-contain" alt="ECI" />
+                <a
+                  href="https://www.elcorteingles.es/videojuegos/A200285229-greedfall-the-dying-world-playstation-5/"
+                  target="_blank"
+                  class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+                >
+                  <img
+                    src="/GreedFall/eci-triangulo-logo.png"
+                    class="h-5 w-auto object-contain"
+                    alt="ECI"
+                  />
                 </a>
-                <a href="https://www.mediamarkt.es/es/product/_ps5-greedfall-the-dying-world-1619559.html?srsltid=AfmBOoq1mCvdtVpqAPGXBzzfFv2wF7JHS-lSW0lvoIen3if7LJphaMTd" target="_blank" class="hover:scale-125 transition-transform brightness-[1.5] contrast-[1.2]">
-                  <img src="/GreedFall/mediamarkt.png" class="h-5 w-auto object-contain" alt="MediaMarkt" />
+                <a
+                  href="https://www.mediamarkt.es/es/product/_ps5-greedfall-the-dying-world-1619559.html?srsltid=AfmBOoq1mCvdtVpqAPGXBzzfFv2wF7JHS-lSW0lvoIen3if7LJphaMTd"
+                  target="_blank"
+                  class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+                >
+                  <img
+                    src="/GreedFall/mediamarkt.png"
+                    class="h-5 w-auto object-contain"
+                    alt="MediaMarkt"
+                  />
                 </a>
               </div>
-              <p class="text-[#F2E6D8]/40 font-garamond italic text-[10px] mt-4 tracking-widest uppercase">Edición Estándar PS5</p>
+              <p
+                class="text-[#F2E6D8]/40 font-garamond italic text-[10px] mt-4 tracking-widest uppercase"
+              >
+                Edición Estándar PS5
+              </p>
             </div>
           </div>
         </div>
 
         <div class="relative group w-full">
-          <div class="absolute inset-0 bg-[#D9895B]/5 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-          <div class="relative p-2 border-2 border-double border-[#D9895B]/40 bg-gradient-to-b from-[#1a130f] to-[#0D0D0D] transition-all duration-700 group-hover:border-[#D9895B]">
-            <div class="absolute -top-1 -left-1 w-8 h-8 border-t-2 border-l-2 border-[#D9895B] z-20"></div>
-            <div class="relative overflow-hidden aspect-[16/9] bg-black flex items-center justify-center">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,137,91,0.15)_0%,transparent_70%)]"></div>
+          <div
+            class="absolute inset-0 bg-[#D9895B]/5 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000"
+          >
+          </div>
+          <div
+            class="relative p-2 border-2 border-double border-[#D9895B]/40 bg-gradient-to-b from-[#1a130f] to-[#0D0D0D] transition-all duration-700 group-hover:border-[#D9895B]"
+          >
+            <div
+              class="absolute -top-1 -left-1 w-8 h-8 border-t-2 border-l-2 border-[#D9895B] z-20"
+            >
+            </div>
+            <div
+              class="relative overflow-hidden aspect-[16/9] bg-black flex items-center justify-center"
+            >
+              <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,137,91,0.15)_0%,transparent_70%)]"
+              >
+              </div>
               <img
-                src="/GreedFall/Greedfall_Deluxe_PS5_PEGI.png" 
+                src="/GreedFall/Greedfall_Deluxe_PS5_PEGI.png"
                 alt="PS5 Collector"
                 class="w-full h-auto max-h-[90%] object-contain scale-[1.1] drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)] transition-all duration-1000 group-hover:scale-[1.15]"
               />
-              <div class="absolute inset-0 shadow-[inset_0_0_80px_rgba(0,0,0,0.9)] pointer-events-none"></div>
+              <div
+                class="absolute inset-0 shadow-[inset_0_0_80px_rgba(0,0,0,0.9)] pointer-events-none"
+              >
+              </div>
             </div>
-            <div class="mt-4 border-t border-[#D9895B]/30 pt-4 text-center">
-               <p class="text-[#D9895B] font-cinzel text-[11px] uppercase tracking-[0.4em] font-bold">Collector's Edition</p>
+            <div
+              class="mt-4 border-t border-[#D9895B]/30 pt-4 flex justify-center items-center relative z-20"
+            >
+              <a
+                href="https://www3.game.es/videojuegos/rol/playstation-5/greedfall-the-dying-world-deluxe-edition/254660"
+                target="_blank"
+                class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+              >
+                <img
+                  src="/GreedFall/Logo_GAME_Store_Iberia.png"
+                  class="h-5 w-auto object-contain"
+                  alt="Game Exclusive"
+                />
+              </a>
             </div>
+            <p
+              class="text-[#F2E6D8]/40 font-garamond italic text-[10px] mt-4 tracking-widest uppercase text-center"
+            >
+              Edición Deluxe PS5
+            </p>
           </div>
         </div>
       </div>
 
       <div class="flex flex-col gap-8">
         <div class="relative group w-full">
-          <div class="absolute -inset-2 bg-[#107C10]/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="relative p-2 border-2 border-double border-[#5B5E67]/40 bg-[#0D0D0D]/80 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:border-[#D9895B]/60">
-            <div class="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-[#D9895B]"></div>
+          <div
+            class="absolute -inset-2 bg-[#107C10]/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+          >
+          </div>
+          <div
+            class="relative p-2 border-2 border-double border-[#5B5E67]/40 bg-[#0D0D0D]/80 backdrop-blur-sm shadow-2xl transition-all duration-700 group-hover:border-[#D9895B]/60"
+          >
+            <div
+              class="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-[#D9895B]"
+            >
+            </div>
             <div class="relative overflow-hidden aspect-[3/3.8] bg-black/40">
               <img
                 src="/GreedFall/Xbox_Greedfall_Standard_2D_PEGI.png"
@@ -120,51 +202,131 @@
             </div>
             <div class="mt-6 border-t border-white/10 pt-6 text-center px-4">
               <div class="flex justify-center items-center gap-4 relative z-20">
-                <a href="https://www3.game.es/VIDEOJUEGOS/ROL/XBOX-SERIES-X/GREEDFALL-THE-DYING-WORLD-DELUXE-EDITION/254662" target="_blank" class="hover:scale-125 transition-transform brightness-[1.5] contrast-[1.2]">
-                  <img src="/GreedFall/Logo_GAME_Store_Iberia.png" class="h-5 w-auto object-contain" alt="Game" />
+                <a
+                  href="https://www3.game.es/VIDEOJUEGOS/ROL/XBOX-SERIES-X/GREEDFALL-THE-DYING-WORLD-DELUXE-EDITION/254662"
+                  target="_blank"
+                  class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+                >
+                  <img
+                    src="/GreedFall/Logo_GAME_Store_Iberia.png"
+                    class="h-5 w-auto object-contain"
+                    alt="Game"
+                  />
                 </a>
-                <a href="https://www.fnac.es/Greedfall-The-Dying-World-Xbox-Series-X-Videojuego-Xbox-Series/a12806601" target="_blank" class="hover:scale-125 transition-transform brightness-[1.5] contrast-[1.2]">
-                  <img src="/GreedFall/Fnac_Logo.svg.png" class="h-5 w-auto object-contain" alt="Fnac" />
+                <a
+                  href="https://www.fnac.es/Greedfall-The-Dying-World-Xbox-Series-X-Videojuego-Xbox-Series/a12806601"
+                  target="_blank"
+                  class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+                >
+                  <img
+                    src="/GreedFall/Fnac_Logo.svg.png"
+                    class="h-5 w-auto object-contain"
+                    alt="Fnac"
+                  />
                 </a>
-                <a href="https://www.elcorteingles.es/videojuegos/A200285230-greedfall-the-dying-world-xbox-x-s/?stype=text_box&color=Sin+especificar" target="_blank" class="hover:scale-125 transition-transform brightness-[1.5] contrast-[1.2]">
-                  <img src="/GreedFall/eci-triangulo-logo.png" class="h-5 w-auto object-contain" alt="ECI" />
+                <a
+                  href="https://www.elcorteingles.es/videojuegos/A200285230-greedfall-the-dying-world-xbox-x-s/?stype=text_box&color=Sin+especificar"
+                  target="_blank"
+                  class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+                >
+                  <img
+                    src="/GreedFall/eci-triangulo-logo.png"
+                    class="h-5 w-auto object-contain"
+                    alt="ECI"
+                  />
                 </a>
-                <a href="https://www.mediamarkt.es/es/product/_xbox-series-x-greedfall-the-dying-world-1619560.html" target="_blank" class="hover:scale-125 transition-transform brightness-[1.5] contrast-[1.2]">
-                  <img src="/GreedFall/mediamarkt.png" class="h-5 w-auto object-contain" alt="MediaMarkt" />
+                <a
+                  href="https://www.mediamarkt.es/es/product/_xbox-series-x-greedfall-the-dying-world-1619560.html"
+                  target="_blank"
+                  class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+                >
+                  <img
+                    src="/GreedFall/mediamarkt.png"
+                    class="h-5 w-auto object-contain"
+                    alt="MediaMarkt"
+                  />
                 </a>
               </div>
-              <p class="text-[#F2E6D8]/40 font-garamond italic text-[10px] mt-4 tracking-widest uppercase">Edición Estándar XBOX</p>
+              <p
+                class="text-[#F2E6D8]/40 font-garamond italic text-[10px] mt-4 tracking-widest uppercase"
+              >
+                Edición Estándar XBOX
+              </p>
             </div>
           </div>
         </div>
 
         <div class="relative group w-full">
-          <div class="absolute inset-0 bg-[#D9895B]/5 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-          <div class="relative p-2 border-2 border-double border-[#D9895B]/40 bg-gradient-to-b from-[#1a130f] to-[#0D0D0D] transition-all duration-700 group-hover:border-[#D9895B]">
-            <div class="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 border-[#D9895B] z-20"></div>
-            <div class="relative overflow-hidden aspect-[16/9] bg-black flex items-center justify-center">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,137,91,0.15)_0%,transparent_70%)]"></div>
+          <div
+            class="absolute inset-0 bg-[#D9895B]/5 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000"
+          >
+          </div>
+          <div
+            class="relative p-2 border-2 border-double border-[#D9895B]/40 bg-gradient-to-b from-[#1a130f] to-[#0D0D0D] transition-all duration-700 group-hover:border-[#D9895B]"
+          >
+            <div
+              class="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 border-[#D9895B] z-20"
+            >
+            </div>
+            <div
+              class="relative overflow-hidden aspect-[16/9] bg-black flex items-center justify-center"
+            >
+              <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,137,91,0.15)_0%,transparent_70%)]"
+              >
+              </div>
               <img
-                src="/GreedFall/Greedfall_Deluxe_Xbox_PEGI.png" 
+                src="/GreedFall/Greedfall_Deluxe_Xbox_PEGI.png"
                 alt="Xbox Collector"
                 class="w-full h-auto max-h-[90%] object-contain scale-[1.1] drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)] transition-all duration-1000 group-hover:scale-[1.15]"
               />
-              <div class="absolute inset-0 shadow-[inset_0_0_80px_rgba(0,0,0,0.9)] pointer-events-none"></div>
+              <div
+                class="absolute inset-0 shadow-[inset_0_0_80px_rgba(0,0,0,0.9)] pointer-events-none"
+              >
+              </div>
             </div>
-            <div class="mt-4 border-t border-[#D9895B]/30 pt-4 text-center">
-               <p class="text-[#D9895B] font-cinzel text-[11px] uppercase tracking-[0.4em] font-bold">Collector's Edition</p>
+            <div
+              class="mt-4 border-t border-[#D9895B]/30 pt-4 flex justify-center items-center relative z-20"
+            >
+              <a
+                href="https://www3.game.es/VIDEOJUEGOS/ROL/XBOX-SERIES-X/GREEDFALL-THE-DYING-WORLD-DELUXE-EDITION/254662"
+                target="_blank"
+                class="hover:scale-125 transition-transform brightness-[2] contrast-[1.2] opacity-100 mix-blend-normal"
+              >
+                <img
+                  src="/GreedFall/Logo_GAME_Store_Iberia.png"
+                  class="h-5 w-auto object-contain"
+                  alt="Game Exclusive"
+                />
+              </a>
             </div>
+            <p
+              class="text-[#F2E6D8]/40 font-garamond italic text-[10px] mt-4 tracking-widest uppercase text-center"
+            >
+              Edición Deluxe PS5
+            </p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <style>
-  .no-mask {
-    mask-image: none !important;
-    -webkit-mask-image: none !important;
+  .top-mask-only {
+    /* Heredamos la máscara superior del Layout para una transición suave, 
+       pero la parte inferior es sólida para que los logos no se desvanezcan. */
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 15%,
+      black 100%
+    ) !important;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 15%,
+      black 100%
+    ) !important;
   }
 </style>
